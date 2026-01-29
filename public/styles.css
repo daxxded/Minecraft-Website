@@ -1,0 +1,187 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+  background: #0c1117;
+  color: #e6edf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #111825;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="range"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #243146;
+  background: #0f1622;
+  color: inherit;
+}
+
+button {
+  background: #3c7dff;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button.secondary {
+  background: #1f6feb;
+}
+
+button.ghost {
+  background: transparent;
+  border: 1px solid #3b4a63;
+  color: #e6edf3;
+}
+
+button.danger {
+  background: #d73a49;
+}
+
+button.ghost.danger {
+  border-color: #d73a49;
+}
+
+.muted {
+  color: #9fb1c8;
+  margin-top: 0.5rem;
+}
+
+.error {
+  color: #ff7b72;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.panel {
+  background: #0f1622;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.panel.full {
+  grid-column: 1 / -1;
+}
+
+.range {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.properties {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.property-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.property-item input {
+  max-width: 160px;
+}
+
+.console {
+  background: #05070c;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 240px;
+  overflow: auto;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.file-controls,
+.file-upload {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.file-controls input {
+  flex: 1;
+}
+
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.5rem;
+}
+
+.file-table th,
+.file-table td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #1f2a3a;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.file-table a.link {
+  color: #7aa2ff;
+  margin-right: 0.5rem;
+}
+
+.file-table button {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+}

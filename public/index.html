@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Control Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <section class="card" id="login-section">
+      <h1>Minecraft Control Panel</h1>
+      <p class="muted">Sign in to manage the server.</p>
+      <form id="login-form">
+        <label>
+          Username
+          <input type="text" name="username" required />
+        </label>
+        <label>
+          Password
+          <input type="password" name="password" required />
+        </label>
+        <button type="submit">Log in</button>
+      </form>
+      <p id="login-error" class="error"></p>
+    </section>
+
+    <section class="card hidden" id="dashboard-section">
+      <header class="dashboard-header">
+        <div>
+          <h2>Server Dashboard</h2>
+          <p class="muted" id="status-text">Status: ...</p>
+        </div>
+        <button id="logout-button" class="ghost">Log out</button>
+      </header>
+
+      <div class="grid">
+        <div class="panel">
+          <h3>Controls</h3>
+          <label class="range">
+            RAM (GB)
+            <input type="range" id="ram-slider" min="2" max="12" step="1" value="4" />
+            <span id="ram-value">4 GB</span>
+          </label>
+          <div class="button-row">
+            <button id="start-button">Start / Restart</button>
+            <button id="stop-button" class="danger">Stop</button>
+          </div>
+          <p id="control-message" class="muted"></p>
+        </div>
+
+        <div class="panel">
+          <h3>Server Properties</h3>
+          <div id="properties-list" class="properties"></div>
+          <button id="save-properties" class="secondary">Save properties</button>
+          <p id="properties-message" class="muted"></p>
+        </div>
+
+        <div class="panel full">
+          <h3>Console Output</h3>
+          <div id="console" class="console"></div>
+        </div>
+
+        <div class="panel full">
+          <h3>Files</h3>
+          <div class="file-controls">
+            <input type="text" id="path-input" value="." />
+            <button id="refresh-files" class="secondary">Refresh</button>
+          </div>
+          <div class="file-upload">
+            <input type="file" id="file-input" />
+            <button id="upload-file">Upload</button>
+          </div>
+          <table class="file-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Modified</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="file-table-body"></tbody>
+          </table>
+          <p id="files-message" class="muted"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
