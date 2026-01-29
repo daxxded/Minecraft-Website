@@ -1,0 +1,23 @@
+{
+  "port": 3000,
+  "sessionSecret": "change-me",
+  "userFile": "./data/users.json",
+  "minecraft": {
+    "serviceName": "minecraft.service",
+    "envFile": "/etc/minecraft/launch.env",
+    "logFile": "/srv/minecraft/logs/latest.log",
+    "propertiesFile": "/srv/minecraft/server.properties",
+    "rootDir": "/srv/minecraft",
+    "ramMin": 2,
+    "ramMax": 12,
+    "propertyWhitelist": [
+      "motd",
+      "pvp",
+      "difficulty",
+      "online-mode",
+      "max-players",
+      "spawn-protection",
+      "white-list"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+config.json
+data/users.json
+uploads/
+.env
